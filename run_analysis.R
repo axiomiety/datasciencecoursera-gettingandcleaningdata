@@ -15,7 +15,7 @@
 # this function is responsible for downloading and extracting the data
 init <- function() {
   # uncomment the below with your preferred location
-  #setwd("c:/shared/datasciencecoursera-gettingandcleaningdata/")
+  setwd("c:/shared/datasciencecoursera-gettingandcleaningdata/")
   dirname = "scratch"
   if (!dir.exists(dirname)) {dir.create(dirname)}
   fname <- "data.zip"
@@ -127,4 +127,4 @@ cleanUpLabels(e)
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 groupData(e)
 # write the data out
-write.csv(e$tidy_data, file = "tidy_data.csv", row.names=FALSE)
+write.table(e$tidy_data, file = "tidy_data.txt", row.names=FALSE)
