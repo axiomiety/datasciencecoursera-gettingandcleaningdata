@@ -44,4 +44,10 @@ This step standardises the features labels on the `X` data set. Abbreviations su
 
 ### 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-We start by concatenating.
+We start by concatenating the `subject`, `X` and `y` data set to give us a data table that links each subject to a set of measurements and corresponding activity.
+
+We then take the mean of all the measurements.
+
+### Saving the resulting data
+
+The output is stored as `tidy_data.csv` in the current working directory.
